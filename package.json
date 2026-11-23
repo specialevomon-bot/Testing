@@ -1,0 +1,12 @@
+{
+  "name": "rbx-finder-x",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roblox public presence and experience information lookup",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
