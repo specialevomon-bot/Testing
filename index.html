@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090914">
+  <meta name="description" content="RBX Finder X — Roblox public presence and experience lookup.">
+  <title>RBX Finder X</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/"><span class="brand-mark">X</span><span>RBX FINDER <b>X</b></span></a>
+      <span class="live-pill"><i></i> PUBLIC DATA LOOKUP</span>
+    </header>
+    <section class="hero">
+      <div class="eyebrow"><span></span> ROBLOX PRESENCE INTELLIGENCE</div>
+      <h1>Find the <span>experience.</span><br>See what's public.</h1>
+      <p class="sub">Look up a Roblox username and check the presence and experience details Roblox makes available.</p>
+      <form id="lookupForm" class="searchbar">
+        <div class="at">@</div>
+        <input id="username" name="username" maxlength="20" autocomplete="off" spellcheck="false" placeholder="Enter Roblox username" required>
+        <button id="searchBtn" type="submit"><span>Search</span><b>↗</b></button>
+      </form>
+      <div class="hint"><span class="key">↵</span> Press enter to search <span class="dot">·</span> No password or cookie required</div>
+    </section>
+
+    <section id="errorBox" class="error-box hidden" role="alert"></section>
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result-head">
+        <div class="avatar" id="avatar">R</div>
+        <div class="identity"><div class="small-label">ROBLOX ACCOUNT</div><h2 id="displayName">—</h2><p id="handle">@— <span id="userId"></span></p></div>
+        <span id="status" class="status">UNKNOWN</span>
+      </div>
+      <div class="section-label">PRESENCE DETAILS</div>
+      <div class="data-grid">
+        <article class="data-card wide"><span>EXPERIENCE</span><strong id="experience">Not available</strong><small id="creator">Creator unavailable</small></article>
+        <article class="data-card"><span>PLACE ID</span><strong class="mono" id="placeId">—</strong><button class="copy" data-copy="placeId">COPY</button></article>
+        <article class="data-card"><span>UNIVERSE ID</span><strong class="mono" id="universeId">—</strong><button class="copy" data-copy="universeId">COPY</button></article>
+        <article class="data-card"><span>SERVER JOB ID</span><strong class="mono" id="jobId">Not provided</strong><button class="copy" data-copy="jobId">COPY</button></article>
+        <article class="data-card"><span>ROOT PLACE ID</span><strong class="mono" id="rootPlaceId">—</strong><button class="copy" data-copy="rootPlaceId">COPY</button></article>
+      </div>
+      <div id="notice" class="notice"></div>
+      <div class="actions"><button id="joinBtn" class="primary-action" disabled>↗ Join server</button><button id="profileBtn" class="secondary-action">View Roblox profile ↗</button></div>
+      <p class="timestamp" id="checkedAt"></p>
+    </section>
+    <section class="info-strip"><div class="info-icon">i</div><p><b>Privacy-respecting by design.</b> Results come from Roblox's public username, presence and game information APIs. If Roblox omits a server ID or hides experience details, RBX Finder X will show that information as unavailable rather than guessing or bypassing privacy settings.</p></section>
+    <footer><span>RBX FINDER X <i>© 2026</i></span><span>Independent community tool · Not affiliated with Roblox</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
